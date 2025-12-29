@@ -1,21 +1,28 @@
-import { RootProvider } from 'fumadocs-ui/provider/next';
-import './global.css';
-import { Inter } from 'next/font/google';
-import SearchDialog from '@/components/search';
+import { RootProvider } from "fumadocs-ui/provider/next";
+import "./global.css";
+import { Inter } from "next/font/google";
+import { AISearch, AISearchPanel, AISearchTrigger } from "@/components/aiSearch";
+import SearchDialog from "@/components/search";
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets: ["latin"],
 });
 
-export default function Layout({ children }: LayoutProps<'/'>) {
+export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
+        <AISearch>
+          <AISearchTrigger />
         <RootProvider
           search={{
             SearchDialog,
           }}
-        >{children}</RootProvider>
+        >
+          {children}
+        </RootProvider>
+
+        </AISearch>
       </body>
     </html>
   );
