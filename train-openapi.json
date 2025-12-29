@@ -50,14 +50,6 @@
       ]
     }
   ],
-  "x-topics": [
-    {
-      "title": "Getting started",
-      "content": {
-        "$ref": "./docs/getting-started.md"
-      }
-    }
-  ],
   "tags": [
     {
       "name": "Stations",
