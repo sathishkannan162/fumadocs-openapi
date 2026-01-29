@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    container_name: phoenix
+    ports:
+      - "6006:6006"
+    volumes:
+      - ./phoenix-data:/data
+    environment:
+      - PHOENIX_WORKING_DIR=/data
+    restart: unless-stopped

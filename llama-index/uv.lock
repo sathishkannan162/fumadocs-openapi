@@ -797,12 +797,14 @@ source = { virtual = "." }
 dependencies = [
     { name = "ipykernel" },
     { name = "llama-index" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "llama-index", specifier = ">=0.14.13" },
+    { name = "python-dotenv", specifier = ">=1.2.1" },
 ]
 
 [[package]]
