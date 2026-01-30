@@ -5,6 +5,7 @@ services:
     image: arizephoenix/phoenix:latest
     container_name: phoenix
     ports:
+      - "4317:4317"
       - "6006:6006"
     volumes:
       - ./phoenix-data:/data
